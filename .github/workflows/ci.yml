@@ -18,7 +18,7 @@ jobs:
       - run: npm i -g yarn@latest
         name: Upgrade yarn
       - run: yarn global add truffle
-        name: Install truffle@5.4.33
+        name: Install truffle
       - run: yarn test:sol
         name: Perform unit test 
       
