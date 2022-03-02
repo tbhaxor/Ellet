@@ -1,4 +1,3 @@
-require("dotenv").config()
 const Ballot = artifacts.require("Ballot");
 
 const MAX_PROPS = parseInt(process.env.MAX_PROPOSALS || "3")
