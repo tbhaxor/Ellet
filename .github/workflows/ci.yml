@@ -6,7 +6,10 @@ on:
 
 jobs:
   solidity:
-    name: "Solidity Testing"
+    name: "Solidity Testing (Max Proposals = ${{ matrix.max-proposals }}"
+    strategy:
+      matrix:
+        max-proposals: [3, 4, 5]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,4 +24,6 @@ jobs:
         name: Install truffle
       - run: yarn test:sol
         name: Perform unit test 
+        env:
+          MAX_PROPOSALS: ${{ matrix.max-proposals }}
       
