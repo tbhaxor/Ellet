@@ -6,7 +6,7 @@ on:
 
 jobs:
   solidity:
-    name: "Solidity Testing (Max Proposals = ${{ matrix.max-proposals }}"
+    name: "Solidity Testing (Max Proposals = ${{ matrix.max-proposals }})"
     strategy:
       matrix:
         max-proposals: [3, 4, 5]
