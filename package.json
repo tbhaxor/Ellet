@@ -1,0 +1,55 @@
+{
+  "name": "voting",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "test:sol": "truffle test",
+    "test:web": "truffle test"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "resolutions": {
+    "truffle/@truffle/db/**/abstract-leveldown": "*",
+    "truffle/@truffle/preserve-to-buckets/**/abort-controller": "*",
+    "truffle/@truffle/preserve-to-buckets/**/google-protobuf": "^3.2.0",
+    "truffle/@truffle/preserve-to-buckets/**/node-fetch": "*",
+    "@truffle/hdwallet-provider/**/uuid": "^7.0.0",
+    "web3/**/uuid": "^7.0.0",
+    "truffle/**/uuid": "^7.0.0",
+    "truffle/mocha/debug": "4.3.1"
+  }
+}
