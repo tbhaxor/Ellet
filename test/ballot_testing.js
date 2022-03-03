@@ -66,12 +66,13 @@ contract("Ballot", function (accounts) {
         }
 
         return instance.register(accounts[MAX_PROPS + 1])
-          .then(r => assert.isUndefined(r))
+          .then(r => { console.log("test check #1", r); assert.isUndefined(r) })
           .catch(e => {
+            console.log("test check #2", e)
             assert.isFalse(e.receipt.status)
             assert.isUndefined(e.reason)
           })
-      }).catch(e => assert.isUndefined(e))
+      }).catch(e => { console.log("test check #3", e); assert.isUndefined(e) })
   })
 
   it("should throw error if duplicate proposal registers", function () {
