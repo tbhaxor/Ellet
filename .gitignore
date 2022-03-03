@@ -229,8 +229,7 @@ blockchain/geth/**
 blockchain/keystore/**
 blockchain/history
 
-#truffle
-yarn.lock
+# Lockfile for npm
 package-lock.json
 
 ### VisualStudioCode ###
