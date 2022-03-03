@@ -3,16 +3,17 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "clean": "rimraf build dist",
-    "prebuild:web": "yarn build:sol",
     "build:sol": "truffle compile",
     "build:web": "vue-cli-service build",
+    "clean": "rimraf build dist",
+    "prebuild:web": "yarn build:sol",
     "test:sol": "truffle test",
     "test:web": "truffle test"
   },
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
+    "vuex": "^3.6.2",
     "web3": "^1.7.1"
   },
   "devDependencies": {
@@ -21,6 +22,7 @@
     "@metamask/providers": "^8.1.1",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "assert": "^2.0.0",
     "buffer": "^6.0.3",
