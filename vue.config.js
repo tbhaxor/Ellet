@@ -1,5 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 const webpack = require("webpack")
+const path = require("path")
 
 module.exports = defineConfig({
   transpileDependencies: true,
@@ -11,6 +12,9 @@ module.exports = defineConfig({
       }),
     ],
     resolve: {
+      alias: {
+        "@contracts": path.resolve(__dirname, "build", "contracts")
+      },
       fallback: {
         http: require.resolve("stream-http"),
         https: require.resolve("https-browserify"),
