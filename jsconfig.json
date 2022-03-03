@@ -7,6 +7,9 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@contracts/*": [
+        "build/contracts/*"
       ]
     },
     "lib": [

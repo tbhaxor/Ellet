@@ -1,27 +1,43 @@
 {
   "name": "voting",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "build:sol": "truffle compile",
+    "build:web": "vue-cli-service build",
+    "clean": "rimraf build dist",
+    "prebuild:web": "yarn build:sol",
     "test:sol": "truffle test",
     "test:web": "truffle test"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vuex": "^3.6.2",
+    "web3": "^1.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@metamask/providers": "^8.1.1",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "vue-template-compiler": "^2.6.14"
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
+    "rimraf": "^3.0.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
+    "vue-template-compiler": "^2.6.14",
+    "web3-eth-contract": "^1.7.1"
   },
   "eslintConfig": {
     "root": true,
@@ -43,13 +59,7 @@
     "not dead"
   ],
   "resolutions": {
-    "truffle/@truffle/db/**/abstract-leveldown": "*",
-    "truffle/@truffle/preserve-to-buckets/**/abort-controller": "*",
-    "truffle/@truffle/preserve-to-buckets/**/google-protobuf": "^3.2.0",
-    "truffle/@truffle/preserve-to-buckets/**/node-fetch": "*",
-    "@truffle/hdwallet-provider/**/uuid": "^7.0.0",
     "web3/**/uuid": "^7.0.0",
-    "truffle/**/uuid": "^7.0.0",
-    "truffle/mocha/debug": "4.3.1"
+    "@vue/cli-service/**/ansi-regex": "5.0.1"
   }
 }
