@@ -13,7 +13,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^2.6.14",
-    "web3": "2.0.0-alpha.1"
+    "web3": "^1.7.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -21,9 +21,18 @@
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "assert": "^2.0.0",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "https-browserify": "^1.0.0",
+    "os-browserify": "^0.3.0",
+    "process": "^0.11.10",
     "rimraf": "^3.0.2",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0",
+    "url": "^0.11.0",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
