@@ -2,7 +2,9 @@ name: Unit Testing
 
 on:
   pull_request:
-  push:
+    types:
+      - opened
+      - synchronize
 
 jobs:
   solidity:
@@ -23,7 +25,6 @@ jobs:
       - run: yarn global add truffle
         name: Install truffle
       - run: yarn test:sol
-        name: Perform unit test 
+        name: Perform unit test
         env:
           MAX_PROPOSALS: ${{ matrix.max-proposals }}
-      
