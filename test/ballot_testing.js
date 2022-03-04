@@ -69,7 +69,7 @@ contract("Ballot", function (accounts) {
           .then(r => assert.isUndefined(r))
           .catch(e => {
             assert.isFalse(e.receipt.status)
-            assert.isUndefined(e.reason)
+            assert.equal(e.reason, "Panic: Failed assertion")
           })
       }).catch(e => assert.isUndefined(e))
   })
