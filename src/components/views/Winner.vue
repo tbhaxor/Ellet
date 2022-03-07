@@ -21,9 +21,9 @@ export default {
   created() {
     this.$contract.methods
       .getWinner()
-      .send({ from: this.account })
+      .call({ from: this.account })
       .then((winner) => {
-        this.winner = winner;
+        this.winner = winner.toLowerCase();
       })
       .catch((e) => {
         const match = /revert (.+)/.exec(e.message);
