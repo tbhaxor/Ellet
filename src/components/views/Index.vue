@@ -5,8 +5,10 @@
 <script>
 import { mapGetters } from "vuex";
 import Register from "./Registration.vue";
+import SetWeight from "./SetWeight.vue";
+import GetWinner from "./Winner.vue";
 export default {
-  components: { Register },
+  components: { Register, SetWeight, GetWinner },
   computed: {
     ...mapGetters(["page"]),
   },
