@@ -19,6 +19,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import getAccounts from "./mixins/getAccounts";
 
 export default {
   name: "Register",
@@ -27,11 +28,9 @@ export default {
       address: "",
     };
   },
+  mixins: [getAccounts],
   computed: {
-    ...mapGetters(["accounts", "chairperson", "account"]),
-    getAvailableAccounts() {
-      return this.accounts.filter((v) => v != this.chairperson);
-    },
+    ...mapGetters(["account"]),
   },
   methods: {
     async register() {
