@@ -13,29 +13,34 @@
         </option>
       </select>
     </p>
-    <p><button @click="register">Register</button></p>
+    <p>
+      <strong style="margin-right: 15px">Select Address</strong>
+      <input min="1" step="1" v-model="weight" type="number" />
+    </p>
+    <p><button @click="adjustWeight">Adjust Weight</button></p>
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
-import getAccounts from "./mixins/getAccounts";
+import getAccountsMixin from "./mixins/getAccounts";
 
 export default {
-  name: "Register",
+  name: "SetWeight",
+  mixins: [getAccountsMixin],
   data() {
     return {
       address: "",
+      weight: 1,
     };
   },
-  mixins: [getAccounts],
   computed: {
     ...mapGetters(["account"]),
   },
   methods: {
-    async register() {
+    adjustWeight() {
       this.$contract.methods
-        .register(this.address)
+        .setWeight(this.address, this.weight)
         .send({ from: this.account })
         .then(() => alert("Saved"))
         .catch((e) => {
