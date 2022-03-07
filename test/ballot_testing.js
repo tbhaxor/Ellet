@@ -35,7 +35,7 @@ contract("Ballot", function (accounts) {
   it("should throw error if proposal not found", function () {
     return instance.submitVote(accounts[0])
       .then(r => assert.isUndefined(r))
-      .catch(e => assert.equal(e.reason, "Proposal does not exists"))
+      .catch(e => assert.equal(e.reason, "Proposal does not exist"))
   })
 
   it("should throw error if chairperson register itself", function () {
