@@ -10,6 +10,10 @@ There is nothing special but it would serve as a good gist for the new commers t
 
 1. Deploy the contract as the owner (aka chairperson)
 2. Add proposols (voters) with maximum limit. By default it's 3
+3. Get the winner's address
+4. Update the voting weightage from chairperson's account
+5. Pre-check and modifiers for role-based access and prevent double voting
+6. Tamper proof ledger recording on the ethereum blockchain
 
 ## Privileges
 
