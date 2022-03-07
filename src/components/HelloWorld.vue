@@ -3,15 +3,21 @@
     <h1>{{ msg }}</h1>
     <p>Current Account: {{ account }}</p>
     <p>Chairperson: {{ chairperson }}</p>
+
+    <Sidebar :isChairperson="account === chairperson" />
   </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
+import Sidebar from "@/components/sidebars/Index.vue";
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  components: {
+    Sidebar,
   },
   computed: {
     ...mapGetters(["account", "chairperson"]),
