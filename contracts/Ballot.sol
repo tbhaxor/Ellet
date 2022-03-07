@@ -74,7 +74,7 @@ contract Ballot {
      */
     function submitVote(address addr) public hasVotePermission {
         int256 id = getProposalId(addr);
-        require(id != -1, "Proposal does not exists");
+        require(id != -1, "Proposal does not exist");
 
         proposals[uint256(id)].count += voters[msg.sender].weight;
         voters[msg.sender].isVoted = true;
