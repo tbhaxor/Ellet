@@ -24,6 +24,8 @@ jobs:
         name: Upgrade yarn
       - run: yarn global add truffle
         name: Install truffle
+      - run: yarn install
+        name: Install node modules
       - run: yarn test:sol
         name: Perform unit test
         env:
