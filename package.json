@@ -30,6 +30,7 @@
     "crypto-browserify": "^3.12.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "eth-gas-reporter": "^0.2.24",
     "https-browserify": "^1.0.0",
     "os-browserify": "^0.3.0",
     "process": "^0.11.10",
