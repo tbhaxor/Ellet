@@ -15,6 +15,17 @@ There is nothing special but it would serve as a good gist for the new commers t
 5. Pre-check and modifiers for role-based access and prevent double voting
 6. Tamper proof ledger recording on the ethereum blockchain
 
+
+## In Action 🚀 
+
+Click on the image below to check the working video of the project
+
+<div style="text-align: center">
+  <a href="https://vimeo.com/686251740" target="_blank">
+  <img src="https://i.imgur.com/SaInCPS.png" width="1200" height="600" /> 
+  </a>
+</div>
+
 ## Privileges
 
 Like in web2, this is also a role-based application with two major roles: Voter and Chairperson
