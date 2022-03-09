@@ -14,7 +14,7 @@
       </select>
     </p>
     <p>
-      <strong style="margin-right: 15px">Select Address</strong>
+      <strong style="margin-right: 15px">Weightage Amount:</strong>
       <input min="1" step="1" v-model="weight" type="number" />
     </p>
     <p><button @click="adjustWeight">Adjust Weight</button></p>
