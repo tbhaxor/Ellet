@@ -63,8 +63,6 @@
     "not dead"
   ],
   "resolutions": {
-    "web3/**/uuid": "^7.0.0",
-    "@vue/cli-service/**/ansi-regex": "5.0.1",
-    "eth-gas-reporter/**/ansi-regex": "5.0.1"
+    "web3/**/uuid": "^7.0.0"
   }
 }
